@@ -1,0 +1,48 @@
+<br><br><br><div class="container col-md-5 col-md-offset-4 bg-light loginBox" style="padding-bottom:20px">
+<br><br>
+<h3>WELCOME CANDIDATE</h3>
+
+    <div>
+    <!-- <button class="btn btn-info m-4" routerLink="/candiupassword">Update Password</button> -->
+    <button class="btn btn-info m-4" routerLink="/candidate/cv">View Candidates</button>
+    <!-- <button class="btn btn-info m-4" routerLink="/candidate/questions">Q&A</button> -->
+    <!-- <button class="btn btn-info m-4" routerLink="/candiviewresult">View Results</button> -->
+    <button class="btn btn-secondary m-4" routerLink="">Logout</button>
+</div>
+</div>
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">
+                CV
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 p-2">
+        </div>
+        <div class="col-6 p-2">
+            <div *ngFor="let detail of details" class="card m-1 p-1 bg-light">
+                <h3>{{detail[0]}}</h3>
+                PARTY: {{ detail[1].party}}<br>
+                STATION: {{ detail[1].area}}<br>
+                PROMISE: {{detail[1].promises}}<br>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-inline float-left">
+        <select class="form-control" [value]="candidatesPerPage" (change)="changePageSize($event.target.value)">
+           
+            <option value="3">3 per page</option>
+            <option value="4">4 per page</option>
+            <option value="5">5 per page</option>
+        </select>
+         {{$event.target.value}}
+    </div>
+    <div class="btn-group float-right">
+        <button *ngFor="let page of pageNumbers" (click)="changePage(page)" class="btn btn-outline-primary"
+            [class.active]="page == selectedPage">
+            {{ page }}
+        </button>
+    </div>--> 

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h2>Login to vote</h2>
+    <form #form="ngForm" novalidate (ngSubmit)="onSubmit()" class="m-2">
+        <div class="form-group">
+            <label class="float-left" >Aadhar</label>
+            <input class="form-control" type="text" #aadhar="ngModel" name="aadhar" [(ngModel)]="user.aadhar" required />
+            <span *ngIf="submitted && aadhar.invalid" class="text-danger">
+               Aadhar is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Login Password</label>
+            <input class="form-control" type="password" #pass="ngModel" name="pass" [(ngModel)]="account.password" required />
+            <span *ngIf="submitted && pass.invalid" class="text-danger">
+               Login password is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Voting Password</label>
+            <input class="form-control" type="password" #votepass="ngModel" name="votepass" [(ngModel)]="station.stationpassword" required />
+            <span *ngIf="submitted && votepass.invalid" class="text-danger">
+               Voting password is required
+            </span>
+            
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary m-1" (click)=validate(form) type="submit">
+                Submit
+            </button>
+            <button class="btn btn-secondary m-1" routerLink="/votebuttons">
+                Back
+            </button>
+            
+        </div>
+    </form>
+    </div>

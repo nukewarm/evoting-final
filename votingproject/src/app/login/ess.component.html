@@ -1,0 +1,24 @@
+<br><br><br><div class="container col-md-8 col-md-offset-4 bg-light loginBox" style="padding-bottom:40px;padding-top:40px">
+    <h3>WELCOME ESS</h3>
+<br>
+<br>
+
+    <button type="button" class="btn btn-info m-1" routerLink="/ess/enablevoting">
+       Enable Voting
+    </button>
+    <button class="btn btn-info m-1" routerLink="/ess/genvotingpass">
+        Generate Voting Passwords
+    </button>
+    <button type="button" class="btn btn-info m-1" (click)="disableVoting()">
+        Disable Voting
+     </button>
+    
+     <button type="button" class="btn btn-info m-1" (click)="deletePassword()">
+        Delete All Passwords
+     </button>
+
+    <button class="btn btn-secondary m-1" routerLink="">
+        Logout
+    </button>
+    
+</div>

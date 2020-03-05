@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <label for="region">
+      <h5>Your region:</h5>
+    </label>
+    {{id}}
+  </div>
+
+  <div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Candidate</th>
+          <th scope="col">Party</th>
+          <th scope="col">Vote</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let can of candibyregions">
+          <td>{{ can[0] }}</td>
+          <td>{{ can[1] }}</td>
+          <td>
+            <input type="radio" name="optradio" (click)="setChosenCandi(can[0],can[2])"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary m-1"(click)="updateVotes()" >
+      Submit
+    </button>
+    <button class="btn btn-secondary m-1" routerLink="/logindetails">
+      Home
+    </button>
+
+  </div>
+</div>

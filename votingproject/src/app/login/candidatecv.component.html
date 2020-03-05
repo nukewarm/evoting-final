@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<br><br>
+               <h3>CANDIDATE DETAILS</h3> 
+    <div class="row">
+        <div class="col-3 p-2">
+        </div>
+        <div class="col-6 p-2">
+            <div *ngFor="let detail of details" class="card m-1 p-1 bg-light">
+                <h3>{{detail[0]}}</h3>
+                PARTY: {{ detail[1].party}}<br>
+                STATION: {{ detail[1].area}}<br>
+                PROMISE: {{detail[1].promises}}<br>
+            </div>
+
+        </div>
+    </div>
+    <button class="btn btn-secondary m-1" routerLink="/candidate">Back</button>
+</div>

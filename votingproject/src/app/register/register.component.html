@@ -1,0 +1,69 @@
+<br><br><br>
+<div class="container col-md-4 col-md-offset-4 bg-light loginBox" style="padding-bottom:10px">
+    <br>
+    <h2>Voter Registration</h2>
+    <form #form="ngForm" novalidate (ngSubmit)="onClick(form)" (ngSubmit)="submitRegister(form)" class="m-2">
+        <div class="form-group">
+            <label class="float-left">Name</label>
+            <input class="form-control" #name="ngModel" name="name" [(ngModel)]="user.name" placeholder="Enter your name"required />
+            <span *ngIf="submitted && name.invalid" class="text-danger">
+                Please enter your name
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Address</label>
+            <input class="form-control" #address="ngModel" name="address" [(ngModel)]="user.address" placeholder="Enter your address" required />
+            <span *ngIf="submitted && address.invalid" class="text-danger">
+                Please enter your address
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Aadhar</label>
+            <input class="form-control" #aadhar="ngModel" name="aadhar" [(ngModel)]="user.aadhar" placeholder="Enter your aadhar number"  required />
+            <span *ngIf="submitted && aadhar.invalid" class="text-danger">
+                Please enter your aadhar number
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Station id</label>
+            <input class="form-control" #stationid="ngModel" name="stationid" [(ngModel)]="user.stationid" placeholder="Enter your station name" required />
+            <span *ngIf="submitted && stationid.invalid" class="text-danger">
+                Please enter your stationid
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Gender</label>
+            <input class="form-control" pattern="[fFmM]" #gender="ngModel" name="gender" [(ngModel)]="user.gender" placeholder="Enter f or m" required />
+            <span *ngIf="submitted && gender.invalid" class="text-danger">
+                Please enter your gender
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">D.O.B</label>
+            <input class="form-control" type="date" #dob="ngModel" name="dob" [(ngModel)]="user.dob" required />
+            <span *ngIf="submitted && dob.invalid" class="text-danger">
+                Please enter your D.O.B
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Image</label>
+            <input class="form-control" #image="ngModel" name="image" [(ngModel)]="user.image" required />
+            <span *ngIf="submitted && dob.invalid" class="text-danger">
+                Please enter your Image
+            </span>
+        </div>
+
+        <div class="text-center">
+            
+                <button id="button" class="btn btn-primary m-1" type="submit" >
+                    Register
+                </button> 
+         
+            
+            
+            <button class="btn btn-secondary m-1" routerLink="/login">
+                Back
+            </button>
+        </div>
+    </form>
+</div>

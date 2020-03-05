@@ -1,0 +1,29 @@
+<div class="container"><br><br>
+    <h3>CREATE CANDIDATE ACCOUNTS</h3>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Party</th>
+                    <th scope="col">Station</th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let x of appliedCandidates">
+                    <td>{{ x[0] }}</td>
+                    <td>{{ x[1] }}</td>
+                    <td>{{ x[2] }}</td>
+                    <td><button type="button" class="btn btn-outline-success" (click)="generateAccount(x[3])">Create
+                            Account</button>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-secondary m-1" routerLink="/eca">
+            Home
+        </button>
+
+    </div>
+</div>

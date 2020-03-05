@@ -1,0 +1,18 @@
+<div>
+    <button class="btn btn-info m-4" routerLink="/votelogin" [disabled]="station.enabled==false">Vote</button>
+    <button class="btn btn-info m-4" [disabled]="station.stationpassword==null" (click)="showPassword()">View voting password</button> 
+    <button class="btn btn-secondary m-4" routerLink="/logindetails" >Back</button> 
+</div>
+
+<div>
+    <form #form="ngForm" (ngSubmit)="submit(form)" (ngSubmit)="findStation(form)" class="m-2">
+        Station ID: <input type="text" class="form-control" name="station" #name="ngModel" [(ngModel)]="station.stationid" required/>
+        <span *ngIf="submitted && name.invalid" class="text-danger">
+            Please enter station ID
+        </span>
+        <button id="button" class="btn btn-primary m-1" type="submit" >
+            Submit  
+        </button> 
+    </form>
+    
+</div>

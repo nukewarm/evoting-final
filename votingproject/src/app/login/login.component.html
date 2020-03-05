@@ -1,0 +1,32 @@
+<br><br><br><div class="container col-md-4 col-md-offset-4 bg-light loginBox" style="padding-bottom:30px">
+<br><br>
+<h3>LOGIN</h3>
+<form #form="ngForm" novalidate (ngSubmit)="onLogin()" class="m-2">
+    <div class="form-group">
+        <label class="float-left" >Username</label>
+        <input class="form-control"   #username="ngModel" name="username" [(ngModel)]="account.username"  required />
+        <span *ngIf="submitted && username.invalid" class="text-danger">
+           Username is required
+        </span>
+    </div>
+    <div class="form-group">
+        <label class="float-left">Password</label>
+        <input class="form-control" type="password"   #password="ngModel" name="password" [(ngModel)]="account.password" required />
+        <span *ngIf="submitted && password.invalid" class="text-danger">
+           Password is required
+        </span>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary m-1" (click)="validate(account.username, account.password)" [disabled]="!(username.dirty && password.dirty)" type="submit">
+            Login
+        </button>
+        <button class="btn btn-primary m-1" routerLink="/register" >
+            Don't have an account? Register
+        </button>
+        <button class="btn btn-secondary m-1" routerLink="">
+            Home Page
+        </button>
+        
+    </div>
+</form>
+</div>

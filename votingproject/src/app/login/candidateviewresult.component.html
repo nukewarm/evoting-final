@@ -1,0 +1,42 @@
+<div class="container">
+    <br><br>
+     <h3>RESULT</h3>
+     <br>
+   
+     <div>
+       <form #form="ngForm" (ngSubmit)="submit(form)" (ngSubmit)="findStation(form)" class="m-2">
+        <h5> Enter area:</h5> <input type="text" class="form-control" name="station" #name="ngModel" [(ngModel)]="station.stationid"
+           required />
+         <span *ngIf="submitted && name.invalid" class="text-danger">
+           Please enter station ID
+         </span>
+         <button id="button" class="btn btn-primary m-1" type="submit">
+           Submit
+         </button>
+       </form>
+   
+     </div>
+   
+     <div>
+   
+       <table class="table table-striped">
+         <thead>
+           <tr>
+             <th scope="col">Name</th>
+             <th scope="col">Party</th>
+             <th scope="col">Earned votes</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let detail of details">
+             <td>{{detail[0]}}</td>
+             <td>{{detail[1]}}</td>
+             <td>{{detail[3]}}</td>
+           </tr>
+         </tbody>
+       </table>
+       <button class="btn btn-secondary m-1" routerLink="/candidate">
+         Backkkk
+       </button>
+     </div>
+   </div>
